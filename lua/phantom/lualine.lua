@@ -27,7 +27,6 @@ local colors = {
 	-- Primary colors
 	blue = p.blue.hex,
 	marsala = p.marsala.hex,
-	cement = p.cement.hex,
 
 	-- Diagnostics & Git
 	red = p.red.hex,
