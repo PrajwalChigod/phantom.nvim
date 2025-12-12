@@ -122,10 +122,10 @@ local base = lush(function(injected_functions)
 
 		Comment({ fg = p.fg_dark, gui = "italic" }),
 		Constant({ fg = p.blue.lighten(10), gui = "bold" }),
-		String({ fg = p.cement }),
-		Character({ fg = p.cement }),
+		String({ fg = p.fg, gui = "italic" }),
+		Character({ fg = p.fg, gui = "italic" }),
 		Number({ fg = p.orange }),
-		Boolean({ fg = p.blue }),
+		Boolean({ fg = p.orange }),
 		Float({ fg = p.orange }),
 		Identifier({ fg = p.fg }),
 		Function({ fg = p.blue }),
@@ -154,7 +154,7 @@ local base = lush(function(injected_functions)
 		Underlined({ gui = "underline" }),
 		Ignore({ fg = p.fg_dark }),
 		Error({ fg = p.red }),
-		Todo({ fg = p.red, gui = "bold" }),
+		Todo({ fg = p.orange, gui = "bold" }),
 
 		-- TREESITTER HIGHLIGHTS
 
