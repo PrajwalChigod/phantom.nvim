@@ -61,7 +61,7 @@ local base = lush(function(injected_functions)
 
 		-- SEARCH AND HIGHLIGHT
 
-		Search({ fg = p.black, bg = p.orange }),
+		Search({ fg = p.black, bg = p.blue }),
 		IncSearch({ fg = p.black, bg = p.blue }),
 		CurSearch({ fg = p.black, bg = p.blue }),
 		Substitute({ fg = p.black, bg = p.red }),
@@ -107,16 +107,16 @@ local base = lush(function(injected_functions)
 		DiagnosticError({ fg = p.red }),
 		DiagnosticWarn({ fg = p.red }),
 		DiagnosticInfo({ fg = p.blue }),
-		DiagnosticHint({ fg = p.fg }),
+		DiagnosticHint({ fg = p.green }),
 		DiagnosticOk({ fg = p.green }),
 		DiagnosticUnderlineError({ sp = p.red, gui = "undercurl" }),
 		DiagnosticUnderlineWarn({ sp = p.red, gui = "undercurl" }),
 		DiagnosticUnderlineInfo({ sp = p.blue, gui = "undercurl" }),
-		DiagnosticUnderlineHint({ sp = p.fg, gui = "undercurl" }),
+		DiagnosticUnderlineHint({ sp = p.green, gui = "undercurl" }),
 		DiagnosticVirtualTextError({ fg = p.red.darken(20) }),
 		DiagnosticVirtualTextWarn({ fg = p.red.darken(20) }),
 		DiagnosticVirtualTextInfo({ fg = p.blue.darken(20) }),
-		DiagnosticVirtualTextHint({ fg = p.fg_dim }),
+		DiagnosticVirtualTextHint({ fg = p.green.darken(20) }),
 
 		-- SYNTAX HIGHLIGHTING
 
@@ -168,7 +168,7 @@ local base = lush(function(injected_functions)
 		sym("@constant.macro")({ fg = p.blue2, gui = "bold" }),
 		sym("@constant.builtin")({ fg = p.blue2, gui = "bold" }),
 
-		sym("@module")({ fg = p.fg }),
+		sym("@module")({ fg = p.fg, gui = "italic"}),
 		sym("@label")({ fg = p.fg }),
 
 		sym("@string")({ fg = p.fg, gui = "italic" }),
@@ -187,13 +187,13 @@ local base = lush(function(injected_functions)
 		sym("@type")({ fg = p.marsala, gui = "bold" }),
 		sym("@type.definition")({ fg = p.marsala }),
 		sym("@constructor")({ fg = p.marsala, gui = "bold" }),
-		sym("@type.builtin")({ fg = p.orange2 }),
+		sym("@type.builtin")({ fg = p.blue2 }),
 
-		sym("@attribute")({ fg = p.fg }),
+		sym("@attribute")({ fg = p.orange }),
 		sym("@property")({ fg = p.blue }),
 
 		sym("@function")({ fg = p.blue }),
-		sym("@function.builtin")({ fg = p.blue}),
+		sym("@function.builtin")({ fg = p.blue2 }),
 		sym("@function.call")({ fg = p.blue }),
 		sym("@function.macro")({ fg = p.blue }),
 		sym("@function.method")({ fg = p.blue }),
@@ -201,20 +201,20 @@ local base = lush(function(injected_functions)
 
 		sym("@operator")({ fg = p.fg_dim }),
 
-		sym("@keyword")({ fg = p.fg_dim, gui = "bold" }),
-		sym("@keyword.function")({ fg = p.fg_dim, gui = "bold" }),
-		sym("@keyword.import")({ fg = p.fg_dim, gui = "bold" }),
+		sym("@keyword")({ fg = p.fg_dim }),
+		sym("@keyword.function")({ fg = p.fg_dim }),
+		sym("@keyword.import")({ fg = p.blue2, gui = "bold" }),
 		sym("@keyword.coroutine")({ fg = p.fg_dim, gui = "bold" }),
-		sym("@keyword.operator")({ fg = p.fg_dim, gui = "bold" }),
-		sym("@keyword.storage")({ fg = p.fg_dim, gui = "bold" }),
-		sym("@keyword.repeat")({ fg = p.fg_dim, gui = "bold" }),
-		sym("@keyword.return")({ fg = p.fg_dim, gui = "bold" }),
+		sym("@keyword.operator")({ fg = p.blue2 }),
+		sym("@keyword.storage")({ fg = p.blue2 }),
+		sym("@keyword.repeat")({ fg = p.blue2 }),
+		sym("@keyword.return")({ fg = p.blue2 }),
 		sym("@keyword.debug")({ fg = p.fg_dim, gui = "bold" }),
 		sym("@keyword.exception")({ fg = p.fg_dim, gui = "bold" }),
-		sym("@keyword.conditional")({ fg = p.fg_dim, gui = "bold" }),
-		sym("@keyword.conditional.ternary")({ fg = p.fg_dim, gui = "bold" }),
-		sym("@keyword.directive")({ fg = p.fg_dim, gui = "bold", gui = "bold" }),
-		sym("@keyword.directive.define")({ fg = p.fg_dim, gui = "bold" }),
+		sym("@keyword.conditional")({ fg = p.blue2 }),
+		sym("@keyword.conditional.ternary")({ fg = p.blue2}),
+		sym("@keyword.directive")({ fg = p.blue2 }),
+		sym("@keyword.directive.define")({ fg = p.blue2}),
 
 		sym("@punctuation.delimiter")({ fg = p.fg_dim }),
 		sym("@punctuation.bracket")({ fg = p.fg_dim }),
@@ -253,8 +253,8 @@ local base = lush(function(injected_functions)
 		-- LSP SEMANTIC TOKENS
 
 		-- Types
-		sym("@lsp.type.class")({ fg = p.marsala, gui = "bold" }),
-		sym("@lsp.type.decorator")({ fg = p.blue2 }),
+		sym("@lsp.type.class")({ fg = p.orange2, gui = "bold" }),
+		sym("@lsp.type.decorator")({ fg = p.orange }),
 		sym("@lsp.type.enum")({ fg = p.marsala, gui = "bold" }),
 		sym("@lsp.type.enumMember")({ fg = p.blue2, gui = "bold" }),
 		sym("@lsp.type.interface")({ fg = p.marsala, gui = "bold" }),
@@ -270,10 +270,10 @@ local base = lush(function(injected_functions)
 		-- Variables and parameters
 		sym("@lsp.type.variable")({ fg = p.fg_dim }),
 		sym("@lsp.type.parameter")({ fg = p.fg }),
-		sym("@lsp.type.property")({ fg = p.blue }),
+		sym("@lsp.type.property")({ fg = p.fg }),
 
 		-- Namespaces and modules
-		sym("@lsp.type.namespace")({ fg = p.fg }),
+		sym("@lsp.type.namespace")({ fg = p.fg , gui = "italic" }),
 
 		-- Keywords and operators
 		sym("@lsp.type.keyword")({ fg = p.fg_dim, gui = "bold" }),
@@ -284,10 +284,18 @@ local base = lush(function(injected_functions)
 		sym("@lsp.type.string")({ fg = p.fg, gui = "italic" }),
 
 		-- Modifiers
-		sym("@lsp.mod.readonly")({ fg = p.blue2, gui = "bold" }),
+    sym("@lsp.mod.parameter")({ fg = p.fg }),
+    sym("@lsp.mod.declaration")({ fg = p.fg_dim }),
 		sym("@lsp.mod.deprecated")({ fg = p.marsala2, gui = "strikethrough" }),
 		sym("@lsp.mod.static")({ fg = p.marsala2, gui = "bold" }),
-		sym("@lsp.mod.defaultLibrary")({ fg = p.orange2, gui = "bold" }),
+		sym("@lsp.mod.defaultLibrary")({ fg = p.blue2 }),
+		sym("@lsp.mod.readonly")({ fg = p.blue2, gui = "bold" }),
+
+    -- Typed modifiers
+    sym("@lsp.typemod.selfParameter")({ fg = p.marsala, gui = "italic" }),
+    sym("@lsp.typemod.class.declaration")({ fg = p.marsala, gui = "bold" }),
+    sym("@lsp.typemod.function.declaration")({ fg = p.blue }),
+    sym("@lsp.typemod.method.declaration")({ fg = p.blue })
 	}
 end)
 

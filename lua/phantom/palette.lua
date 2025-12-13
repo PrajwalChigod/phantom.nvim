@@ -22,8 +22,7 @@ M.blue = hsl(220, 30, 60)
 M.blue2 = hsl(220, 20, 40)
 
 M.marsala = hsl(10, 40, 30)
-M.marsala2 = hsl(10, 35, 25)
-
+M.marsala2 = hsl(10, 35, 20)
 
 M.orange = hsl(40, 28, 52)
 M.orange2 = hsl(30, 35, 35)
