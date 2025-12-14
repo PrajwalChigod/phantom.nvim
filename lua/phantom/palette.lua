@@ -16,8 +16,8 @@ M.fg_dim = "#808080"
 M.fg_dark = "#666666"
 
 -- Primary syntax colors
-M.blue = "#6b7fa8"
-M.blue2 = "#52617a"
+M.blue = "#466092"
+M.blue2 = "#394c6e"
 
 M.marsala = "#7d4439"
 M.marsala2 = "#452520"
