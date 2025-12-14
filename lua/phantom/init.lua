@@ -41,13 +41,14 @@ function M.setup(opts)
 	end
 
 	vim.opt.background = "dark"
-	vim.g.colors_name = "phantom"
 
 	-- Clear existing highlights
 	vim.cmd("highlight clear")
 	if vim.fn.exists("syntax_on") == 1 then
 		vim.cmd("syntax reset")
 	end
+
+	vim.g.colors_name = "phantom"
 
 	-- Check cache first if enabled
 	if M.config.cache and vim.g.phantom_theme_loaded then
