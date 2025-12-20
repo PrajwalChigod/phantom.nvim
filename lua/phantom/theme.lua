@@ -132,10 +132,10 @@ local function apply_base_highlights()
 		Define = { fg = p.fg },
 		Macro = { fg = p.blue_light, bold = true },
 		PreCondit = { fg = p.fg },
-		Type = { fg = p.PhantomRed },
+		Type = { fg = p.phantomRed },
 		StorageClass = { fg = p.fg },
 		Structure = { fg = p.phantomBlue },
-		Typedef = { fg = p.PhantomRed },
+		Typedef = { fg = p.phantomRed },
 		Special = { fg = p.phantomBlue },
 		SpecialChar = { fg = p.phantomBlue },
 		Tag = { fg = p.phantomBlue },
@@ -173,8 +173,8 @@ local function apply_base_highlights()
 		["@number"] = { fg = p.phantomOrange },
 		["@number.float"] = { fg = p.phantomOrange },
 
-		["@type"] = { fg = p.PhantomRed },
-		["@type.definition"] = { fg = p.PhantomRed },
+		["@type"] = { fg = p.phantomRed },
+		["@type.definition"] = { fg = p.phantomRed },
 		["@constructor"] = { fg = p.phantomBlue },
 		["@type.builtin"] = { fg = p.phantomOrange },
 
@@ -220,7 +220,7 @@ local function apply_base_highlights()
 		["@markup.italic"] = { italic = true },
 		["@markup.strikethrough"] = { strikethrough = true },
 		["@markup.underline"] = { underline = true },
-		["@markup.heading"] = { fg = p.PhantomRed, bold = true },
+		["@markup.heading"] = { fg = p.phantomRed, bold = true },
 		["@markup.quote"] = { fg = p.phantomBlue, italic = true },
 		["@markup.math"] = { fg = p.phantomBlue },
 		["@markup.link"] = { fg = p.green },
@@ -241,20 +241,20 @@ local function apply_base_highlights()
 		["@tag.delimiter"] = { fg = p.fg_dim },
 
 		-- LSP SEMANTIC TOKENS
-		["@lsp.type.class"] = { fg = p.PhantomRed },
+		["@lsp.type.class"] = { fg = p.phantomRed },
 		["@lsp.type.decorator"] = { fg = p.phantomOrange },
-		["@lsp.type.enum"] = { fg = p.PhantomRed, bold = true },
+		["@lsp.type.enum"] = { fg = p.phantomRed, bold = true },
 		["@lsp.type.enumMember"] = { fg = p.phantomBlue, bold = true },
-		["@lsp.type.interface"] = { fg = p.PhantomRed, bold = true },
-		["@lsp.type.struct"] = { fg = p.PhantomRed, bold = true },
-		["@lsp.type.type"] = { fg = p.PhantomRed, bold = true },
+		["@lsp.type.interface"] = { fg = p.phantomRed, bold = true },
+		["@lsp.type.struct"] = { fg = p.phantomRed, bold = true },
+		["@lsp.type.type"] = { fg = p.phantomRed, bold = true },
 		["@lsp.type.typeParameter"] = { fg = p.phantomBrown },
 
 		["@lsp.type.function"] = { fg = p.phantomBlue },
 		["@lsp.type.method"] = { fg = p.phantomBlue },
 		["@lsp.type.macro"] = { fg = p.phantomBlue, bold = true },
 
-		["@lsp.type.variable"] = { fg = p.fg_dim },
+		["@lsp.type.variable"] = { fg = p.fg },
 		["@lsp.type.parameter"] = { fg = p.fg },
 		["@lsp.type.property"] = { fg = p.fg },
 
@@ -273,8 +273,8 @@ local function apply_base_highlights()
 		["@lsp.mod.defaultLibrary"] = { fg = p.phantomOrange },
 		["@lsp.mod.readonly"] = { fg = p.phantomBrown, bold = true },
 
-		["@lsp.typemod.selfParameter"] = { fg = p.PhantomRed, italic = true },
-		["@lsp.typemod.class.declaration"] = { fg = p.PhantomRed },
+		["@lsp.typemod.selfParameter"] = { fg = p.phantomRed, italic = true },
+		["@lsp.typemod.class.declaration"] = { fg = p.phantomRed },
 		["@lsp.typemod.function.declaration"] = { fg = p.phantomBlue },
 		["@lsp.typemod.method.declaration"] = { fg = p.phantomBlue },
 	}
