@@ -30,7 +30,7 @@ local colors = {
 
 	-- Diagnostics & Git
 	red = p.red,
-	orange = p.orange,
+	orange = p.phantomOrange,
 	green = p.green,
 }
 

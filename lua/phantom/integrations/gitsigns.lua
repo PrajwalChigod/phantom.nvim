@@ -6,10 +6,10 @@ local p = require("phantom.palette")
 function M.load()
 	local highlights = {
 		GitSignsAdd = { fg = p.green },
-		GitSignsChange = { fg = p.orange },
+		GitSignsChange = { fg = p.phantomOrange },
 		GitSignsDelete = { fg = p.red },
 		GitSignsAddNr = { fg = p.green },
-		GitSignsChangeNr = { fg = p.orange },
+		GitSignsChangeNr = { fg = p.phantomOrange },
 		GitSignsDeleteNr = { fg = p.red },
 		GitSignsAddLn = { bg = p.green_bg },
 		GitSignsChangeLn = { bg = p.orange_bg },
