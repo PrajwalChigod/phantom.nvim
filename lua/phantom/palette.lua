@@ -5,7 +5,7 @@
 local M = {}
 
 -- Background colors
-M.black = "#030301"
+M.bg = "#030301"
 M.surface = "#9e9b93"
 M.selection = "#1a1a1a"
 M.cursorline = "#1a1a1a"

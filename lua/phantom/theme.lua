@@ -8,9 +8,9 @@ local function apply_base_highlights()
 	local highlights = {
 
 		-- BASE HIGHLIGHTS
-		Normal = { fg = p.fg, bg = p.black },
+		Normal = { fg = p.fg, bg = p.bg },
 		NormalFloat = { fg = p.fg, bg = p.surface },
-		NormalNC = { fg = p.fg_dim, bg = p.black },
+		NormalNC = { fg = p.fg_dim, bg = p.bg },
 		FloatBorder = { fg = p.fg_dark, bg = p.surface },
 		FloatTitle = { fg = p.fg, bg = p.surface, bold = true },
 
@@ -28,8 +28,8 @@ local function apply_base_highlights()
 
 		-- LINE NUMBERS AND COLUMNS
 		LineNr = { fg = p.fg_dark },
-		SignColumn = { bg = p.black },
-		FoldColumn = { fg = p.fg_dark, bg = p.black },
+		SignColumn = { bg = p.bg },
+		FoldColumn = { fg = p.fg_dark, bg = p.bg },
 		ColorColumn = { bg = p.surface },
 		VertSplit = { fg = p.selection },
 		WinSeparator = { fg = p.selection },
@@ -41,13 +41,13 @@ local function apply_base_highlights()
 		StatusLineTermNC = { fg = p.fg_dark, bg = p.surface },
 
 		-- WINBAR
-		WinBar = { fg = p.fg, bg = p.black },
-		WinBarNC = { fg = p.fg_dark, bg = p.black },
+		WinBar = { fg = p.fg, bg = p.bg },
+		WinBarNC = { fg = p.fg_dark, bg = p.bg },
 
 		-- TAB LINE
 		TabLine = { fg = p.fg_dark, bg = p.surface },
 		TabLineFill = { bg = p.surface },
-		TabLineSel = { fg = p.fg, bg = p.black },
+		TabLineSel = { fg = p.fg, bg = p.bg },
 
 		-- POPUP MENU
 		Pmenu = { fg = p.fg, bg = p.surface },
@@ -61,7 +61,7 @@ local function apply_base_highlights()
 		Search = { fg = p.fg, bg = p.blue_search },
 		IncSearch = { fg = p.fg, bg = p.blue_search },
 		CurSearch = { fg = p.fg, bg = p.blue_search },
-		Substitute = { fg = p.black, bg = p.red },
+		Substitute = { fg = p.bg, bg = p.red },
 
 		-- MESSAGES
 		ErrorMsg = { fg = p.red },
@@ -75,12 +75,12 @@ local function apply_base_highlights()
 		NonText = { fg = p.fg_dark },
 		SpecialKey = { fg = p.fg_dark },
 		Whitespace = { fg = p.selection },
-		EndOfBuffer = { fg = p.black },
+		EndOfBuffer = { fg = p.bg },
 		Directory = { fg = p.phantomBlue },
 		Title = { fg = p.fg, bold = true },
 		Conceal = { fg = p.fg_dark },
 		Folded = { fg = p.fg_dark, bg = p.surface },
-		WildMenu = { fg = p.black, bg = p.phantomBlue },
+		WildMenu = { fg = p.bg, bg = p.phantomBlue },
 		QuickFixLine = { bg = p.selection },
 
 		-- DIFF

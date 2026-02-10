@@ -15,7 +15,7 @@ local p = require("phantom.palette")
 -- Colors are already in hex format
 local colors = {
 	-- Base
-	bg = p.black,
+	bg = p.bg,
 	bg_light = p.surface,
 	bg_lighter = p.selection,
 
