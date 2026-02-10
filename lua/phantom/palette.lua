@@ -5,8 +5,8 @@
 local M = {}
 
 -- Background colors
-M.black = "#1a1814"
-M.surface = "#262626"
+M.black = "#030301"
+M.surface = "#9e9b93"
 M.selection = "#1a1a1a"
 M.cursorline = "#1a1a1a"
 
@@ -17,13 +17,8 @@ M.fg_dark = "#666666"
 
 -- Primary syntax colors
 M.phantomBlue = "#466092"
-M.phantomBlue2 = "#394c6e"
-
 M.phantomRed = "#7d4439"
-M.phantomRed2 = "#452520"
-
 M.phantomOrange = "#a69566"
-M.phantomOrange2 = "#6b5333"
 
 -- UI colors
 M.red = "#af5050"
