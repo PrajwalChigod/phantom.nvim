@@ -126,7 +126,7 @@ local function apply_base_highlights()
 		Label = { fg = p.fg },
 		Operator = { fg = p.fg_dim },
 		Keyword = { fg = p.phantomGray, bold = true },
-		Exception = { fg = p.fg, bold = true },
+		Exception = { fg = p.phantomRed, bold = true },
 		PreProc = { fg = p.fg_dim },
 		Include = { fg = p.fg },
 		Define = { fg = p.fg },
@@ -151,11 +151,11 @@ local function apply_base_highlights()
 		["@variable"] = { fg = p.fg_dim },
 		["@variable.parameter"] = { fg = p.fg_dim },
 		["@variable.member"] = { fg = p.fg },
-		["@variable.builtin"] = { fg = p.phantomOrange },
+		["@variable.builtin"] = { fg = p.fg },
 
 		["@constant"] = { fg = p.phantomBrown, bold = true },
 		["@constant.macro"] = { fg = p.phantomBrown, bold = true },
-		["@constant.builtin"] = { fg = p.phantomOrange },
+		["@constant.builtin"] = { fg = p.fg },
 
 		["@module"] = { fg = p.fg, italic = true },
 		["@label"] = { fg = p.fg },
@@ -173,16 +173,16 @@ local function apply_base_highlights()
 		["@number"] = { fg = p.phantomOrange },
 		["@number.float"] = { fg = p.phantomOrange },
 
-		["@type"] = { fg = p.phantomRed },
-		["@type.definition"] = { fg = p.phantomRed },
-		["@constructor"] = { fg = p.phantomBlue },
-		["@type.builtin"] = { fg = p.phantomOrange },
+		["@type"] = { fg = p.phantomSlate },
+		["@type.definition"] = { fg = p.phantomSlate },
+		["@constructor"] = { fg = p.fg },
+		["@type.builtin"] = { fg = p.fg },
 
 		["@attribute"] = { fg = p.phantomOrange },
 		["@property"] = { fg = p.phantomBlue },
 
 		["@function"] = { fg = p.phantomBlue },
-		["@function.builtin"] = { fg = p.phantomOrange },
+		["@function.builtin"] = { fg = p.fg },
 		["@function.call"] = { fg = p.phantomBlue },
 		["@function.macro"] = { fg = p.phantomBlue },
 		["@function.method"] = { fg = p.phantomBlue },
@@ -190,21 +190,21 @@ local function apply_base_highlights()
 
 		["@operator"] = { fg = p.fg_dim },
 
-		["@keyword"] = { fg = p.phantomGray },
-		["@keyword.function"] = { fg = p.phantomGray },
-		["@keyword.type"] = { fg = p.phantomGray },
+		["@keyword"] = { fg = p.phantomGray, bold = true },
+		["@keyword.function"] = { fg = p.phantomGray, bold = true },
+		["@keyword.type"] = { fg = p.phantomGray, bold = true },
 		["@keyword.import"] = { fg = p.phantomGray, bold = true },
 		["@keyword.coroutine"] = { fg = p.phantomGray, bold = true },
-		["@keyword.operator"] = { fg = p.phantomGray },
-		["@keyword.storage"] = { fg = p.phantomGray },
-		["@keyword.repeat"] = { fg = p.phantomGray },
-		["@keyword.return"] = { fg = p.phantomGray },
+		["@keyword.operator"] = { fg = p.phantomRed, bold = true },
+		["@keyword.storage"] = { fg = p.phantomGray, bold = true },
+		["@keyword.repeat"] = { fg = p.phantomGray, bold = true },
+		["@keyword.return"] = { fg = p.phantomRed, bold = true },
 		["@keyword.debug"] = { fg = p.phantomGray, bold = true },
-		["@keyword.exception"] = { fg = p.phantomGray, bold = true },
-		["@keyword.conditional"] = { fg = p.phantomGray },
-		["@keyword.conditional.ternary"] = { fg = p.phantomGray },
-		["@keyword.directive"] = { fg = p.phantomGray },
-		["@keyword.directive.define"] = { fg = p.phantomGray },
+		["@keyword.exception"] = { fg = p.phantomRed, bold = true },
+		["@keyword.conditional"] = { fg = p.phantomGray, bold = true },
+		["@keyword.conditional.ternary"] = { fg = p.phantomGray, bold = true },
+		["@keyword.directive"] = { fg = p.phantomGray, bold = true },
+		["@keyword.directive.define"] = { fg = p.phantomGray, bold = true },
 
 		["@punctuation.delimiter"] = { fg = p.fg_dim },
 		["@punctuation.bracket"] = { fg = p.fg_dim },
@@ -241,7 +241,7 @@ local function apply_base_highlights()
 		["@tag.delimiter"] = { fg = p.fg_dim },
 
 		-- LSP SEMANTIC TOKENS
-		["@lsp.type.class"] = { fg = p.phantomRed },
+		["@lsp.type.class"] = { fg = p.phantomSlate },
 		["@lsp.type.decorator"] = { fg = p.phantomOrange },
 		["@lsp.type.enum"] = { fg = p.phantomRed, bold = true },
 		["@lsp.type.enumMember"] = { fg = p.phantomBlue, bold = true },
@@ -267,16 +267,11 @@ local function apply_base_highlights()
 		["@lsp.type.string"] = { fg = p.fg, italic = true },
 
 		["@lsp.mod.parameter"] = { fg = p.fg_dim },
-		["@lsp.mod.declaration"] = { fg = p.fg_dim },
 		["@lsp.mod.deprecated"] = { fg = p.phantomBrown, strikethrough = true },
 		["@lsp.mod.static"] = { fg = p.phantomBrown, bold = true },
 		["@lsp.mod.defaultLibrary"] = { fg = p.phantomOrange },
 		["@lsp.mod.readonly"] = { fg = p.phantomBrown, bold = true },
 
-		["@lsp.typemod.selfParameter"] = { fg = p.phantomRed, italic = true },
-		["@lsp.typemod.class.declaration"] = { fg = p.phantomRed },
-		["@lsp.typemod.function.declaration"] = { fg = p.phantomBlue },
-		["@lsp.typemod.method.declaration"] = { fg = p.phantomBlue },
 	}
 
 	-- Apply all highlights

@@ -13,12 +13,16 @@ M.cursorline = "#1a1a1a"
 -- Foreground colors
 M.fg = "#999999"
 M.fg_dim = "#808080"
-M.fg_dark = "#666666"
+M.fg_dark = "#3a3a3a"
 
 -- Primary syntax colors
-M.phantomBlue = "#466092"
+M.phantomBlue = "#708090"
+-- M.phantomSlate = "#8ba4b0"
+M.phantomSlate = "#57737a"
 M.phantomRed = "#7d4439"
 M.phantomOrange = "#a69566"
+M.phantomGray = "#666666"
+M.phantomGreen = "#789978"
 
 -- UI colors
 M.red = "#af5050"
